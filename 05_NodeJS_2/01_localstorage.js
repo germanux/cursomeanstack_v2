@@ -1,3 +1,5 @@
+
+console.log("Empezando");
 if (typeof localStorage === "undefined" || localStorage === null) {
     var MiLocalStorage = require("node-localstorage").LocalStorage;
     localStorage = new MiLocalStorage("./dir_datos");
