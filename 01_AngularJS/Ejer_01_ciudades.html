@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html data-ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1 AngularJS: Ciudades</title>
+</head>
+
+<body data-ng-init="ciudades=['Madrid', 'Barcelona', 'Bilbao']">
+
+    <input type="text" data-ng-model="nuevaCiudad" />
+    <input type="button" data-ng-click="ciudades.push(nuevaCiudad); nuevaCiudad='z'" value="Añadir" />
+    <h3>Bucle con NG Repeat</h3>
+    <ol>
+        <!-- Recorrrer array del model -->
+        <li data-ng-repeat="ciudad in ciudades track by $index">
+            {{ ciudad + " esta el " + $index }}
+        </li>
+    </ol>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html data-ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo 2 AngularJS: Directivas</title>
+</head>
+
+<body data-ng-init="miBool = true; variosNombres=['Greta', 'Emilio', 'Daniel']">
+    <input type="checkbox" data-ng-model="miBool" /> {{ miBool ? "VERDADERO" : "FALSO" }}
+
+    <input type="button" data-ng-click="variosNombres=['Nadie']" value="Vaciar" />
+    <input type="text" data-ng-model="esteInput" data-ng-change="variosNombres=[esteInput, 'Otro elemento']" />
+    <h3>Bucle con NG Repeat</h3>
+    <ul>
+        <!-- Recorrrer array del model -->
+        <li data-ng-repeat="nombre in variosNombres" >
+            {{ nombre + " está presente" }}
+        </li>
+    </ul>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+</html>

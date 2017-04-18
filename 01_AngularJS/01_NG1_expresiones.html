@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo 1 AngularJS: Expresiones</title>
+</head>
+
+<body data-ng-app>
+    {{ "Hola mundo " + (1+1) }}
+    <br> {{ parseInt("400")
+    < 600 ? "VERDADERO" : "FALSO" }} <br> {{ 3.1415927 | number: 4 }}
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+</html>
