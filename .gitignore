@@ -251,3 +251,7 @@ paket-files/
 .idea/
 *.sln.iml
 desktop.ini
+*.odg#
+db_hotel/
+08_db_ejemplo/
+db_ejemplo/
