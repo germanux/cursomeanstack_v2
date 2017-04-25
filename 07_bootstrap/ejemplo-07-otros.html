@@ -25,70 +25,81 @@
 </head>
 
 <body>
-    <div>
+    <div class="container">
         <h1>Ejemplos de imagenes</h1>
         Normal:
         <img src="img/gato-muere1.jpg" alt="Gato a bocajarro" width="300" height="266"> .img-rounded
-        <img src="img/gato-muere1.jpg" alt="Gato a bocajarro" width="300" height="266"> <br>.img-circle
-        <img src="img/gato-muere1.jpg" alt="Gato a bocajarro" width="300" height="266" /> .img-thumbnail
-        <img src="img/gato-muere1.jpg" alt="Gato a bocajarro" width="300" height="266">
+        <img src="img/gato-muere1.jpg" alt="Gato a bocajarro" width="300" height="266" class="img-rounded"> <br>.img-circle
+        <img src="img/gato-muere1.jpg" alt="Gato a bocajarro" width="300" height="266" class="img-circle" /> .img-thumbnail
+        <img src="img/gato-muere1.jpg" alt="Gato a bocajarro" width="300" height="266" class="img-thumbnail">
 
         <br/>
-        <div>
+        <div class="jumbotron">
             <h1>Ejemplos de jumbotron</h1>
             <p>Node Hoteles, un paraíso para los jumbotrones</p>
         </div>
 
         <br/>
-        <div>
+        <div class="alert alert-success">
             <strong>Realizado</strong> Indica una acción positiva o que Sergio ha terminado la web
         </div>
 
-        <div>
-            <button type="button" >&times;</button>
+        <div class="alert alert-success">
+            <button type="button" class="close">&times;</button>
             <strong>Title!</strong> Alert body ...
         </div>
 
-        <div>
+        <div class="alert alert-info">
             <strong>Realizado</strong> Indica un cambio o acción informativa
         </div>
 
-        <div>
-            <button type="button">&times;</button>
+        <div class="alert alert-warning">
+            <button type="button" class="close">&times;</button>
             <strong>Title!</strong> Alert body ...
         </div>
 
-        <div>
-            <button type="button">&times;</button>
-            <strong>Title!</strong> Indica un peligro o que hay un colombiano entre nosotros
+        <div class="alert alert-danger">
+            <button type="button" class="close">&times;</button>
+            <strong>Title!</strong> Indica un peligro o que hay un venezolano entre nosotros
         </div>
 
 
         <h1>Ejemplos de iconos</h1>
 
-        <button type="button">
-			<span ></span> Buscar
+        <button type="button" class="btn btn-default">
+			<span class="glyphicon glyphicon-search"></span> Buscar
 		</button>
         </p>
         <p>Icono "buscar" como botón:
-            <button type="button">
-			<span></span> Check
+            <button type="button" class="btn btn-info">
+			<span class="glyphicon glyphicon-check"></span> Check
 		</button>
         </p>
-        <p>Icono imprimir:></span></p>
+        <p>Icono imprimir:<span class="glyphicon glyphicon-print"></span>
+        </p>
         <p>Icono imprimir como botón:
-            <a href="#">
-                <span></span> Imprimir
+            <a href="#" class="btn btn-success btn-lg">
+                <span class="glyphicon glyphicon-print"></span> Imprimir
             </a>
         </p>
-        <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp">
-            <span></span> Ver más
+        <a class="btn btn-success btn-lg" href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp">
+            <span class="glyphicon glyphicon-plus"></span> Ver más
         </a>
 
 
         <h2>Barra de progreso</h2>
-        <div>
-            <div style="width: 60%">
+        <div class="progress">
+            <div style="width: 60%" class="progress-bar-warning" role="progressbar">
+                <span>60% Complete</span>
+            </div>
+        </div>
+        <div class="progress">
+            <div style="width: 60%" class="progress-bar-info" role="progressbar">
+                <span>60% Complete</span>
+            </div>
+        </div>
+        <div class="progress">
+            <div style="width: 60%" class="progress-bar-success" role="progressbar">
                 <span>60% Complete</span>
             </div>
         </div>
@@ -96,14 +107,14 @@
         <h2>Otras Barras de progreso: progress-bar-warning, progress-bar-alert</h2>
 
         <h2>Calendarios</h2>
-        <div>
-            <div>
-                <div>
-                    <div>
-                        <div id='datetimepicker1'>
-                            <input type='text'/>
-                            <span >
-							<span></span>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div class="input-group date" id='datetimepicker1'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
                             </span>
                         </div>
                     </div>
@@ -120,15 +131,15 @@
             <div>
                 <div>
                     <div id='datetimepicker6'>
-                        <input type='text'  />
-                        <span >
+                        <input type='text' />
+                        <span>
 						<span></span>
                         </span>
                     </div>
                 </div>
             </div>
-            <div >
-                <div >
+            <div>
+                <div>
                     <div id='datetimepicker7'>
                         <input type='text' />
                         <span>
@@ -154,8 +165,8 @@
         </script>
 
 
-        <a href="https://eonasdan.github.io/bootstrap-datetimepicker/">
-            <span></span> Ver calendarios
+        <a href="https://eonasdan.github.io/bootstrap-datetimepicker/" class="btn btn-success btn-lg">
+            <span class="glyphicon glyphicon-plus"></span> Ver calendarios
         </a>
 </body>
 
