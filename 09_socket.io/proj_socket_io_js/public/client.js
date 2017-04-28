@@ -16,7 +16,7 @@ function mostrarMensajes(data) {
     var html = data.map(function(elem, index) {
         return (`
             <div>
-                <strong>${elem.author}</strong>:
+                <strong style='color: ${elem.color}'>${elem.author}</strong>:
                 <em>${elem.text}</em>
             </div>
         `);

@@ -255,3 +255,6 @@ desktop.ini
 db_hotel/
 08_db_ejemplo/
 db_ejemplo/
+09_socket.io/proj_socket_io_a2/socketio-ng2/src/app/chat.service.ts
+09_socket.io/proj_socket_io_a2/socketio-ng2/src/polyfills.ts
+09_socket.io/proj_socket_io_a2/socketio-ng2/
