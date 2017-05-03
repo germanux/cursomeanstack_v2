@@ -1,7 +1,28 @@
 var assert = require("assert");
 var indexMod = require("./index");
+var modPromesa = require("./ejemplo_promesa.js");
 
 describe("Batería de pruebas", function() {
+
+    describe("Probar asincronía con promesas", function() {
+        it("Debe devolver un array con un 7 al final", function(done) {
+
+            var array = [1, 2, 3];
+            modPromesa.addToArrayPromise(4, array)
+                .then(function() { return modPromesa.addToArrayPromise(5, array) })
+                .then(function() { return modPromesa.addToArrayPromise(6, array) })
+                .then(function() { return modPromesa.addToArrayPromise(7, array) })
+                .then(function() {
+                    console.log(array);
+                    assert.equal(7, array[array.length - 1]);
+                    done();
+                })
+                .catch((err) => {
+                    console.log(err.message);
+                    done(err);
+                });
+        });
+    });
 
     describe("Probando index.js", function() {
         describe("Probando ejecutarApp()", function() {

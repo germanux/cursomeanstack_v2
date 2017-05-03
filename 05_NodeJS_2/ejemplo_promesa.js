@@ -19,16 +19,17 @@ addToArray(4, array, function(err) {
         console.log(array);
     });
 });*/
+console.log("IMPORTADO PROMESAS");
 
 function addToArrayPromise(data, array) {
     var promise = new Promise(
         function(resolve, reject) {
-            if (array.length > 5)
-                array = null;
+            /*            if (array.length > 5)
+                            array = null; */
             setTimeout(function() {
                 array.push(data);
                 resolve(array);
-            }, 1000);
+            }, 10);
 
             if (!array) {
                 reject(new Error("No existe el array"));
@@ -37,9 +38,13 @@ function addToArrayPromise(data, array) {
     );
     return promise;
 }
+/*
 addToArrayPromise(4, array)
     .then(function() { return addToArrayPromise(5, array) })
     .then(function() { return addToArrayPromise(6, array) })
     .then(function() { return addToArrayPromise(7, array) })
     .then(function() { console.log(array) })
-    .catch(err => console.log(err.message));
+    .catch(err => console.log(err.message)); */
+
+module.exports.addToArray = addToArray;
+module.exports.addToArrayPromise = addToArrayPromise;
